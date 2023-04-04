@@ -20,7 +20,7 @@ fb.post('/', (req, res) => {
       text,
     };
 
-    readAndAppend(newFeedback, './db/db.json);
+    readAndAppend(newFeedback, './db/db.json');
 
     const response = {
       status: 'success',
