@@ -1,6 +1,9 @@
 const fb = require('express').Router();
 
+const { router } = require('.');
 const {writeToFile, readFromFile, readAndAppend } = require('../helpers/fsUtils');
+
+
 
 // GET Route for retrieving all the feedback
 fb.get('/', (req, res) =>
@@ -32,5 +35,9 @@ console.log("response", response)
     res.json('Error in posting feedback');
   }
 });
+
+router.get('/notes', (req,res) =>
+
+);
 
 module.exports = fb;
