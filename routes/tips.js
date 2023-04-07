@@ -1,6 +1,6 @@
 const fb = require('express').Router();
-// const { v4: uuidv4 } = require('uuid');
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+
+const {writeToFile, readFromFile, readAndAppend } = require('../helpers/fsUtils');
 
 // GET Route for retrieving all the feedback
 fb.get('/', (req, res) =>
@@ -10,8 +10,8 @@ fb.get('/', (req, res) =>
 // POST Route for submitting feedback
 fb.post('/', (req, res) => {
   // Destructuring assignment for the items in req.body
-  const { email, feedbackType, feedback } = req.body;
-
+  const {title, text} = req.body;
+console.log(req.body)
   // If all the required properties are present
   if (title && text) {
     // Variable for the object we will save
@@ -20,13 +20,13 @@ fb.post('/', (req, res) => {
       text,
     };
 
-    readAndAppend(newFeedback, './db/db.json');
+    readAndAppend(newFeedback, "./db/db.json")
 
     const response = {
       status: 'success',
       body: newFeedback,
     };
-
+console.log("response", response)
     res.json(response);
   } else {
     res.json('Error in posting feedback');
