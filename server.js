@@ -28,11 +28,7 @@ app.post("/api/notes", (req, res) => {
   res.json("hello")
 
 })
-app.post("/fun", (req, res) => {
-  console.log(req.body)
-  res.json("hello")
 
-})
 
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)

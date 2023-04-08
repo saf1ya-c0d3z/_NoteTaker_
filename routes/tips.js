@@ -1,16 +1,16 @@
-const fb = require('express').Router();
 const router  = require('express').Router();
+const uuid  = require('uuid');
 const {writeToFile, readFromFile, readAndAppend } = require('../helpers/fsUtils');
 
 
 
 // GET Route for retrieving all the feedback
-fb.get('/', (req, res) =>
+router.get('/', (req, res) =>
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
 // POST Route for submitting feedback
-fb.post('/', (req, res) => {
+router.post('/', (req, res) => {
   // Destructuring assignment for the items in req.body
   const {title, text} = req.body;
 console.log(req.body)
@@ -20,6 +20,7 @@ console.log(req.body)
     const newFeedback = {
       title,
       text,
+      id: uuid.v4()
     };
 
     readAndAppend(newFeedback, "./db/db.json")
@@ -35,7 +36,23 @@ console.log("response", response)
   }
 });
 
-router.get()
+router.delete('/:id', (req, res) => {
+  const Id = req.params.id;
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      // Make a new array of all tips except the one with the ID provided in the URL
+      const result = json.filter((note) => note.id !== Id);
+
+      // Save that array to the filesystem
+      writeToFile('./db/db.json', result);
+
+      // Respond to the DELETE request
+      res.json(`note ${Id} has been deleted 🗑️`);
+    });
+});
+
+// router.get()
 
 // router.get('/notes', (req,res) =>
 //   Store 
@@ -53,4 +70,4 @@ router.get()
 //   .catch((err)=> res.status(500).json(err))
 // });
 
-module.exports = fb;
+module.exports = router;
