@@ -27,6 +27,7 @@ Application Screenshots:
 Link to Deployed Application: 
 
 Link to Github Repository:
+https://github.com/saf1ya-c0d3z/_NoteTaker_
 
   ##TechnologyUsed
   * Express js
