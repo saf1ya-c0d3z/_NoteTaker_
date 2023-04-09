@@ -20,7 +20,9 @@ This is a note taker/saver/deleter designed to help busy workers or students to 
   ##Links
 Application Screenshots:
 
-
+<img width="1440" alt="Screen Shot 2023-04-08 at 7 36 34 PM" src="https://user-images.githubusercontent.com/118941179/230751217-a4eec3bf-3a8d-495f-b8e4-274f15f7611e.png">
+<img width="1440" alt="Screen Shot 2023-04-08 at 7 37 02 PM" src="https://user-images.githubusercontent.com/118941179/230751220-d726f1b5-8bf4-4a01-b4cf-92dd920e1413.png">
+<img width="1440" alt="Screen Shot 2023-04-08 at 7 37 07 PM" src="https://user-images.githubusercontent.com/118941179/230751223-4879b90d-4993-42eb-b250-7015bad5b4bc.png">
 
 Link to Deployed Application: 
 
