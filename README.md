@@ -8,7 +8,7 @@
   * [TechnologyUsed](#Technologyused)
   * [Credits](#Credits)
 
-  ##Description
+  ## Description
   User Story
 
 ```md
@@ -17,7 +17,7 @@ This is a note taker/saver/deleter designed to help busy workers or students to 
 
 
 
-  ##Links
+  ## Links
 Application Screenshots:
 
 <img width="1440" alt="Screen Shot 2023-04-08 at 7 36 34 PM" src="https://user-images.githubusercontent.com/118941179/230751217-a4eec3bf-3a8d-495f-b8e4-274f15f7611e.png">
@@ -29,12 +29,12 @@ Link to Deployed Application:
 Link to Github Repository:
 https://github.com/saf1ya-c0d3z/_NoteTaker_
 
-  ##TechnologyUsed
+  ## TechnologyUsed
   * Express js
   * Heroku
   
-  ##License
+  ## License
   MIT License
 
-  ##Credits
+  ## Credits
   Created by Safiya Shrader for the UC Berkeley Extension Bootcamp.
